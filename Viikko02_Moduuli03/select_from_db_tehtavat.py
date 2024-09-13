@@ -1,4 +1,4 @@
-# Select from db
+# Select from db - Ohjelmisto 1 Tietokannat - Tehtävät
 
 import mysql.connector
 

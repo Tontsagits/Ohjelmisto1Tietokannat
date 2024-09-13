@@ -32,6 +32,8 @@ if vastaus is not None:
 else:
     print('Jotain meni pieleen.')
 
+# ajettu ensin lp.sql jolla luotiin flight_game tietokanta tietoineen
+
 # 1 select * from goal;
 # 2 select name, type from airport where iso_country = "FI";
 # 3 select name, type from airport where iso_country = "FI" order by name asc;

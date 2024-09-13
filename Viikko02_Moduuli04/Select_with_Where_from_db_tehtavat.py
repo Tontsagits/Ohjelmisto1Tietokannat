@@ -90,19 +90,21 @@ else:
 # and game.screen_name = "Heini";
 
 # 9
-# select *
+# select airport.name
+# from airport, game, goal_reached, goal
+# where game.id = goal_reached.game_id
+# and goal_reached.goal_id = goal.id
+# and game.location = airport.ident
+# and game.screen_name = "Ilkka"
+# and goal.name = "CLOUDS";
+#
+# select * from goal;
+#
+# select game.screen_name, goal.name
 # from game, goal_reached, goal
 # where game.id = goal_reached.game_id
 # and goal_reached.goal_id = goal.id
 # and game.screen_name = "Ilkka";
-#
-# select * from goal;
-#
-# select game.screen_name
-# from game, goal_reached, goal
-# where goal.id = goal_reached.goal_id
-# and goal_reached.game_id = game.id
-# and goal.name = "CLOUDS";
 
 # 10
 #

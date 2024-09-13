@@ -36,12 +36,75 @@ else:
 
 # Tehtävät
 
-# 1 select * from goal;
-# 2 select name, type from airport where iso_country = "FI";
-# 3 select name, type from airport where iso_country = "FI" order by name asc;
-# 4 select name, type from airport where iso_country = "FI" order by type asc, name asc;
-# 5 select name from country where name like "F%";
-# 6 select name from country where name like "%f%";
-# 7 select ident as location from airport where ident = "EGCC";
-# 8 select co2_consumed from game where screen_name = "Ilkka";
-# 9 select co2_budget from game limit 1;
+# 1
+# select country.name as 'country name', airport.name as 'airport name'
+# from country, airport
+# where country.iso_country = airport.iso_country
+# and country.name = "Iceland";
+
+# 2
+# select airport.name as 'airport name'
+# from country, airport
+# where country.iso_country = airport.iso_country
+# and country.name = "France"
+# and airport.type = "large_airport";
+
+# 3
+# select country.name as 'country_name', airport.name as 'airport_name'
+# from country, airport
+# where country.iso_country = airport.iso_country
+# and country.continent = "AN"
+# order by country.name, airport.name;
+
+
+# 4
+# select airport.elevation_ft
+# from airport, game
+# where game.location = airport.ident
+# and game.screen_name = "Heini";
+
+# 5
+# select airport.elevation_ft * 0.3048 as 'elevation_m'
+# from airport, game
+# where game.location = airport.ident
+# and game.screen_name = "Heini";
+
+# 6
+# select airport.name as 'name'
+# from airport, game
+# where game.location = airport.ident
+# and game.screen_name = "Ilkka";
+
+# 7
+# select country.name as 'name'
+# from airport, game, country
+# where game.location = airport.ident
+# and airport.iso_country = country.iso_country
+# and game.screen_name = "Ilkka";
+
+# 8
+# select goal.name as 'name'
+# from game, goal_reached, goal
+# where game.id = goal_reached.game_id
+# and goal_reached.goal_id = goal.id
+# and game.screen_name = "Heini";
+
+# 9
+# select *
+# from game, goal_reached, goal
+# where game.id = goal_reached.game_id
+# and goal_reached.goal_id = goal.id
+# and game.screen_name = "Ilkka";
+#
+# select * from goal;
+#
+# select game.screen_name
+# from game, goal_reached, goal
+# where goal.id = goal_reached.goal_id
+# and goal_reached.game_id = game.id
+# and goal.name = "CLOUDS";
+
+# 10
+#
+
+

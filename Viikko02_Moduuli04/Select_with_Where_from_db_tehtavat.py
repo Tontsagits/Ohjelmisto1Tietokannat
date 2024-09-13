@@ -1,4 +1,4 @@
-# Select from db with Where
+# Select from db - Ohjelmisto 1 Tietokannat - Tehtävät vko 3 moduuli 4
 
 import mysql.connector
 
@@ -31,6 +31,8 @@ if vastaus is not None:
         print(f'{rivi}')
 else:
     print('Jotain meni pieleen.')
+
+# ajettu ensin lp.sql jolla luotiin flight_game tietokanta tietoineen
 
 # 1 select * from goal;
 # 2 select name, type from airport where iso_country = "FI";

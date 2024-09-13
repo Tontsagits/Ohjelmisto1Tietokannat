@@ -1,4 +1,4 @@
-# Select from db - Ohjelmisto 1 Tietokannat - Tehtävät vko 3 moduuli 4
+# Select from db - Ohjelmisto 1 Tietokannat - Tehtävät vko 2 moduuli 4
 
 import mysql.connector
 

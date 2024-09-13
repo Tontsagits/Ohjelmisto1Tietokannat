@@ -1,4 +1,4 @@
-# Select from db - Ohjelmisto 1 Tietokannat - Teoria vko 3 moduuli 4
+# Select from db - Ohjelmisto 1 Tietokannat - Teoria vko 2 moduuli 4
 import mysql.connector
 
 def tee_kysely(sql_lauseke):

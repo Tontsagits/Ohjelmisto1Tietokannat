@@ -32,6 +32,7 @@ else:
     print('Jotain meni pieleen.')
 
 # luodaan ankkalinna tietokanta
+
 # create database ankkalinna;
 # use ankkalinna;
 # create table ankkalinnalainen ( ID int not null auto_increment, etunimi varchar(40), sukunimi varchar(40), primary key (id) );
@@ -42,9 +43,11 @@ else:
 # insert into omistaa (lemmikki_ID, ankkalinnalainen_ID) values(1,1),(1,3),(2,5),(3,4);
 
 # insert into ankkalinnalainen (etunimi, sukunimi) values ("Hessu", "Hopo"), ("Polle", "Koninkaulus");
-# select * from ankkalinnalainen;
-# select * from ankkalinnalainen where sukunimi = "Ankka";
-# select sukunimi from ankkalinnalainen where sukunimi like "%i%";
-# select * from ankkalinnalainen order by sukunimi desc, etunimi desc;
-# select * from ankkalinnalainen order by sukunimi asc, etunimi asc;
-# select id as tunnistenumero, etunimi, sukunimi from ankkalinnalainen;
+
+# Teoria
+
+# select etunimi, sukunimi
+# from ankkalinnalainen, lemmikki, omistaa
+# where omistaa.ankkalinnalainen_id = ankkalinnalainen.id
+# and omistaa.lemmikki_id = lemmikki.id
+# and lemmikki.nimi = "Pulivari";

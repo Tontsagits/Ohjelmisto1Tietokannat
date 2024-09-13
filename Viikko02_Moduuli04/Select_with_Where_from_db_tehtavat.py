@@ -34,6 +34,8 @@ else:
 
 # ajettu ensin lp.sql jolla luotiin flight_game tietokanta tietoineen
 
+# Tehtävät
+
 # 1 select * from goal;
 # 2 select name, type from airport where iso_country = "FI";
 # 3 select name, type from airport where iso_country = "FI" order by name asc;
